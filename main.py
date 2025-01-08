@@ -146,12 +146,12 @@ def main():
                 elif rand_int == 1:
                     obstacles.append(LargeCactus(LARGE_CACTUS, random.randint(0, 2)))
 
-                for obstacle in obstacles:
-                    obstacle.draw(SCREEN)
-                    obstacle.update()
-                    for i, dinosaur in enumerate(dinosaurs):
-                        if dinosaur.rect.colliderect(obstacle.rect):
-                            remove(i)
+            for obstacle in obstacles:
+                obstacle.draw(SCREEN)
+                obstacle.update()
+                for i, dinosaur in enumerate(dinosaurs):
+                    if dinosaur.rect.colliderect(obstacle.rect):
+                        remove(i)
 
             user_input = pygame.key.get_pressed()
 
